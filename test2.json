@@ -1,0 +1,92 @@
+{
+    "nodes": [
+        {
+            "group": "",
+            "id": "1114360",
+            "label": "product",
+            "name": "华安中证细分医药交易型开放式指数证券投资基金联接基金"
+        },
+        {
+            "group": "",
+            "id": "41480400",
+            "label": "product",
+            "name": "华安日日鑫货币市场基金"
+        },
+        {
+            "group": "",
+            "id": "41496776",
+            "label": "product",
+            "name": "华安沪深300指数分级证券投资基金"
+        },
+        {
+            "group": "",
+            "id": "659616",
+            "label": "product",
+            "name": "华安中证细分医药交易型开放式指数证券投资基金"
+        },
+        {
+            "group": "",
+            "id": "479248",
+            "label": "product",
+            "name": "华安中证定向增发事件指数证券投资基金(LOF)"
+        },
+        {
+            "group": "",
+            "id": "2187280",
+            "label": "manager",
+            "name": "苏卿云"
+        }
+    ],
+    "links": [
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "479248"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "659616"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "1114360"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "1114360"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "41480400"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "41480400"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "41480400"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "41496776"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "41496776"
+        },
+        {
+            "relation": "manager",
+            "source": "2187280",
+            "target": "41496776"
+        }
+    ]
+}

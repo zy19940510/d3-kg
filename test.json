@@ -1,0 +1,1060 @@
+{
+    "links": [
+        {
+            "rel": "managed_by",
+            "source": 0,
+            "target": 2
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 0,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 2,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 0,
+            "target": 4
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 0,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 4,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 5,
+            "target": 6
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 5,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 6,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 5,
+            "target": 7
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 5,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 7,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 8,
+            "target": 9
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 8,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 9,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 10,
+            "target": 9
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 10,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 9,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 11,
+            "target": 12
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 11,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 12,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 13,
+            "target": 12
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 13,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 12,
+            "target": 3
+        },
+        {
+            "rel": "managed_by",
+            "source": 14,
+            "target": 15
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 14,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 15,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 17,
+            "target": 18
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 17,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 18,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 19,
+            "target": 18
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 19,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 18,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 20,
+            "target": 21
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 20,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 21,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 22,
+            "target": 23
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 22,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 23,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 22,
+            "target": 24
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 22,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 24,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 25,
+            "target": 26
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 25,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 26,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 27,
+            "target": 28
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 27,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 28,
+            "target": 29
+        },
+        {
+            "rel": "managed_by",
+            "source": 27,
+            "target": 28
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 27,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 28,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 27,
+            "target": 15
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 27,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 15,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 30,
+            "target": 21
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 30,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 21,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 30,
+            "target": 31
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 30,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 31,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 32,
+            "target": 33
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 32,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 33,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 34,
+            "target": 35
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 34,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 35,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 34,
+            "target": 35
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 34,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 35,
+            "target": 36
+        },
+        {
+            "rel": "managed_by",
+            "source": 34,
+            "target": 18
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 34,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 18,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 37,
+            "target": 35
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 37,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 35,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 37,
+            "target": 35
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 37,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 35,
+            "target": 36
+        },
+        {
+            "rel": "managed_by",
+            "source": 37,
+            "target": 18
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 37,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 18,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 38,
+            "target": 39
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 38,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 39,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 40,
+            "target": 41
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 40,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 41,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 42,
+            "target": 28
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 42,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 28,
+            "target": 29
+        },
+        {
+            "rel": "managed_by",
+            "source": 42,
+            "target": 28
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 42,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 28,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 43,
+            "target": 44
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 43,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 44,
+            "target": 16
+        },
+        {
+            "rel": "managed_by",
+            "source": 45,
+            "target": 46
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 45,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 46,
+            "target": 47
+        },
+        {
+            "rel": "managed_by",
+            "source": 48,
+            "target": 49
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 48,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 49,
+            "target": 47
+        },
+        {
+            "rel": "managed_by",
+            "source": 50,
+            "target": 51
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 50,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 51,
+            "target": 47
+        },
+        {
+            "rel": "managed_by",
+            "source": 52,
+            "target": 53
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 52,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 53,
+            "target": 54
+        },
+        {
+            "rel": "managed_by",
+            "source": 52,
+            "target": 55
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 52,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 55,
+            "target": 54
+        },
+        {
+            "rel": "managed_by",
+            "source": 52,
+            "target": 56
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 52,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 56,
+            "target": 54
+        },
+        {
+            "rel": "managed_by",
+            "source": 57,
+            "target": 58
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 57,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 58,
+            "target": 59
+        },
+        {
+            "rel": "managed_by",
+            "source": 57,
+            "target": 60
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 57,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 60,
+            "target": 59
+        },
+        {
+            "rel": "managed_by",
+            "source": 61,
+            "target": 62
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 61,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 62,
+            "target": 63
+        },
+        {
+            "rel": "managed_by",
+            "source": 64,
+            "target": 65
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 64,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 65,
+            "target": 36
+        },
+        {
+            "rel": "managed_by",
+            "source": 66,
+            "target": 67
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 66,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 67,
+            "target": 68
+        },
+        {
+            "rel": "managed_by",
+            "source": 66,
+            "target": 69
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 66,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 69,
+            "target": 68
+        },
+        {
+            "rel": "managed_by",
+            "source": 70,
+            "target": 69
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 70,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 69,
+            "target": 68
+        },
+        {
+            "rel": "managed_by",
+            "source": 71,
+            "target": 69
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 71,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 69,
+            "target": 68
+        },
+        {
+            "rel": "managed_by",
+            "source": 72,
+            "target": 69
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 72,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 69,
+            "target": 68
+        },
+        {
+            "rel": "managed_by",
+            "source": 73,
+            "target": 69
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 73,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 69,
+            "target": 68
+        },
+        {
+            "rel": "managed_by",
+            "source": 74,
+            "target": 69
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 74,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 69,
+            "target": 68
+        },
+        {
+            "rel": "managed_by",
+            "source": 75,
+            "target": 67
+        },
+        {
+            "rel": "trusteed_in",
+            "source": 75,
+            "target": 1
+        },
+        {
+            "rel": "works_for",
+            "source": 67,
+            "target": 68
+        }
+    ],
+    "nodes": [
+        {
+            "label": "fund",
+            "title": "华富竞争力优选"
+        },
+        {
+            "label": "trustee",
+            "title": "建设银行"
+        },
+        {
+            "label": "manager",
+            "title": "陈启明"
+        },
+        {
+            "label": "agency",
+            "title": "华富基金"
+        },
+        {
+            "label": "manager",
+            "title": "龚炜"
+        },
+        {
+            "label": "fund",
+            "title": "华富货币A"
+        },
+        {
+            "label": "manager",
+            "title": "尹培俊"
+        },
+        {
+            "label": "manager",
+            "title": "姚姣姣"
+        },
+        {
+            "label": "fund",
+            "title": "华富增强债券A"
+        },
+        {
+            "label": "manager",
+            "title": "胡伟"
+        },
+        {
+            "label": "fund",
+            "title": "华富增强债券B"
+        },
+        {
+            "label": "fund",
+            "title": "华富策略精选"
+        },
+        {
+            "label": "manager",
+            "title": "高靖瑜"
+        },
+        {
+            "label": "fund",
+            "title": "华富中小板指数增强"
+        },
+        {
+            "label": "fund",
+            "title": "上投摩根核心优选混合"
+        },
+        {
+            "label": "manager",
+            "title": "孙芳"
+        },
+        {
+            "label": "agency",
+            "title": "上投摩根基金"
+        },
+        {
+            "label": "fund",
+            "title": "上投轮动添利债券A"
+        },
+        {
+            "label": "manager",
+            "title": "唐瑭"
+        },
+        {
+            "label": "fund",
+            "title": "上投轮动添利债券C"
+        },
+        {
+            "label": "fund",
+            "title": "上投摩根智选30混合"
+        },
+        {
+            "label": "manager",
+            "title": "孟亮"
+        },
+        {
+            "label": "fund",
+            "title": "上投货币B"
+        },
+        {
+            "label": "manager",
+            "title": "孟晨波"
+        },
+        {
+            "label": "manager",
+            "title": "王化鑫"
+        },
+        {
+            "label": "fund",
+            "title": "上投中证消费指数"
+        },
+        {
+            "label": "manager",
+            "title": "黄栋"
+        },
+        {
+            "label": "fund",
+            "title": "上投摩根双息平衡混合A"
+        },
+        {
+            "label": "manager",
+            "title": "李博"
+        },
+        {
+            "label": "agency",
+            "title": "大成基金"
+        },
+        {
+            "label": "fund",
+            "title": "上投中国优势"
+        },
+        {
+            "label": "manager",
+            "title": "杨景喻"
+        },
+        {
+            "label": "fund",
+            "title": "上投大盘蓝筹"
+        },
+        {
+            "label": "manager",
+            "title": "征茂平"
+        },
+        {
+            "label": "fund",
+            "title": "上投强化债券A"
+        },
+        {
+            "label": "manager",
+            "title": "刘阳"
+        },
+        {
+            "label": "agency",
+            "title": "博时基金"
+        },
+        {
+            "label": "fund",
+            "title": "上投强化债券B"
+        },
+        {
+            "label": "fund",
+            "title": "上投摩根成长先锋混合"
+        },
+        {
+            "label": "manager",
+            "title": "张一甫"
+        },
+        {
+            "label": "fund",
+            "title": "上投摩根全球新兴市场混合"
+        },
+        {
+            "label": "manager",
+            "title": "张淑婉"
+        },
+        {
+            "label": "fund",
+            "title": "上投摩根阿尔法混合"
+        },
+        {
+            "label": "fund",
+            "title": "上投摩根中小盘混合"
+        },
+        {
+            "label": "manager",
+            "title": "郭晨"
+        },
+        {
+            "label": "fund",
+            "title": "东方稳健债券"
+        },
+        {
+            "label": "manager",
+            "title": "姚航"
+        },
+        {
+            "label": "agency",
+            "title": "东方基金"
+        },
+        {
+            "label": "fund",
+            "title": "东方策略成长混合"
+        },
+        {
+            "label": "manager",
+            "title": "王然"
+        },
+        {
+            "label": "fund",
+            "title": "东方龙混合"
+        },
+        {
+            "label": "manager",
+            "title": "朱晓栋"
+        },
+        {
+            "label": "fund",
+            "title": "银华明择多策略定期开放混合"
+        },
+        {
+            "label": "manager",
+            "title": "倪明"
+        },
+        {
+            "label": "agency",
+            "title": "银华基金"
+        },
+        {
+            "label": "manager",
+            "title": "苏静然"
+        },
+        {
+            "label": "manager",
+            "title": "李晓星"
+        },
+        {
+            "label": "fund",
+            "title": "鹏华香港银行指数(LOF)"
+        },
+        {
+            "label": "manager",
+            "title": "崔俊杰"
+        },
+        {
+            "label": "agency",
+            "title": "鹏华基金"
+        },
+        {
+            "label": "manager",
+            "title": "尤柏年"
+        },
+        {
+            "label": "fund",
+            "title": "华夏上证50AH优选指数"
+        },
+        {
+            "label": "manager",
+            "title": "荣膺"
+        },
+        {
+            "label": "agency",
+            "title": "华夏基金"
+        },
+        {
+            "label": "fund",
+            "title": "博时安康定开债(LOF)"
+        },
+        {
+            "label": "manager",
+            "title": "陈凯杨"
+        },
+        {
+            "label": "fund",
+            "title": "易方达国企改革指数分级"
+        },
+        {
+            "label": "manager",
+            "title": "杨俊"
+        },
+        {
+            "label": "agency",
+            "title": "易方达基金"
+        },
+        {
+            "label": "manager",
+            "title": "余海燕"
+        },
+        {
+            "label": "fund",
+            "title": "易方达军工分级B"
+        },
+        {
+            "label": "fund",
+            "title": "易方达军工分级A"
+        },
+        {
+            "label": "fund",
+            "title": "易方达军工分级"
+        },
+        {
+            "label": "fund",
+            "title": "易方达证券公司分级"
+        },
+        {
+            "label": "fund",
+            "title": "易方达证券公司分级A"
+        },
+        {
+            "label": "fund",
+            "title": "易方达国企改革指数分级A"
+        }
+    ]
+}

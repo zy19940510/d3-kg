@@ -119,7 +119,7 @@
             var color = d3.scaleOrdinal(d3.schemeCategory20);
             var width = document.documentElement.clientWidth
             height = document.documentElement.clientHeight;
-            d3.select("#app").select("svg").remove();
+            d3.select("#app").select("svg").remove(); //先清空dom再重新渲染
             var svg = d3.select("#app").append("svg")
                 .on('click', () => {
                     console.log('click', d3.event.target.tagName);
@@ -137,7 +137,7 @@
             // var baseurl = "http://192.168.1.101:8182/?gremlin=g.V().has('name','" + encodeURIComponent(
             //         query) +
             //     "').as('v1').outE().as('e').inV().as('v2').select('v1','e','v2')"
-            var baseurl =encodeURIComponent(query)=='' 
+            var baseurl = encodeURIComponent(query)=='' 
             ? "http://10.116.19.125/funds/" 
             : "http://10.116.19.125/funds/" + encodeURIComponent(query) + "/";
             // document.querySelector('svg').innerHTML = '';

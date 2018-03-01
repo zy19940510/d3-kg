@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>力导向图 - KG</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #app {
+            position: absolute;
+            top: 0;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nodetext {
+            font-size: 12px;
+            font-family: SimSun;
+            fill: #000000;
+        }
+
+        .linetext {
+            font-size: 10px;
+            font-family: Verdana;
+            fill-opacity: 0.0;
+        }
+
+        path.link {
+            fill: none;
+            stroke: #666;
+            stroke-width: 1.5px;
+        }
+
+        path.link.agency {
+            stroke: #ffe066;
+        }
+
+        path.link.managed_by {
+            stroke: #70c1b3;
+        }
+
+        path.link.works_for {
+            stroke: #f25f5c;
+        }
+
+        path.link.managed_by {
+            stroke-dasharray: 0, 2 1;
+        }
+
+        #search {
+            position: absolute;
+            z-index: 999;
+        }
+
+        .form-control {
+            /* display: block; */
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            background-image: none;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            color: #333333;
+            background-color: #ffffff;
+            border-color: #cccccc;
+            white-space: nowrap;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>test</h1>
+    <form class="navbar-form" id="search">
+        <div class="form-group">
+            <input type="text" value="东方策略成长混合" placeholder="Search for Movie name" class="form-control" name="name">
+        </div>
+        <button class="btn btn-default">Search</button>
+    </form>
+    <div id="app"></div>
+    <!-- <script src="./jquery.js"></script> -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript">
+        const color = d3.scaleOrdinal(d3.schemeCategory20);
+        const width = document.documentElement.clientWidth
+        height = document.documentElement.clientHeight;
+        const svg = d3.select("#app").append("svg")
+            .on('click', () => {
+                console.log('click', d3.event.target.tagName);
+            })
+            .attr("pointer-events", "all");
+        //定义缩放函数  
+
+        let simulation = d3.forceSimulation().alphaDecay(0.05) // 设置alpha衰减系数
+            .force("link", d3.forceLink().id(function (d) {
+                return d.id;
+            }).distance(150))
+            .force("collide", d3.forceCollide(1).radius(30).iterations(2).strength(0.95)) // 设置节点之间的radius
+            .force("charge", d3.forceManyBody().strength(-300)) // 节点间的作用力
+            .force("center", d3.forceCenter(width / 2, height / 2));
+        const baseurl = "http://192.168.1.14/funds/";
+        d3.json("./test.json", function (error, graph) {
+
+            if (error) return;
+
+            var link = svg.append("g")
+                .attr("class", "links")
+                .selectAll("path")
+                .data(graph.links)
+                .enter()
+                .append("path")
+                .attr("class", function (d) {
+                    return "link " + d.relation;
+                })
+                .attr("marker-end", function (d) {
+                    return "url(#" + d.relation + ")";
+                })
+                .style("stroke-opacity", 0.3)
+                .attr("stroke-width", 1);
+
+            var line_text = svg.append("g")
+                .attr("class", "line_texts")
+                .selectAll(".linetext")
+                .data(graph.links)
+                .enter()
+                .append("text")
+                .attr("class", "linetext")
+                .style('pointer-events', 'none')
+                .style("fill", function (d) {
+                    if (d.relation == "trusteed_in") {
+                        return "#ffe066";
+                    } else if (d.relation == "works_for") {
+                        return "#f25f5c";
+                    } else if (d.relation == "managed_by") {
+                        return "#70c1b3";
+                    }
+                })
+                .text(function (d) {
+                    return d.relation;
+                });
+
+            var node = svg.append("g")
+                .attr("class", "nodes")
+                .selectAll("circle")
+                .data(graph.nodes)
+                .enter()
+                .append("circle")
+                .attr("r", function (d) {
+                    if (d.label == "product") {
+                        return 20
+                    } else if (d.label == "agency") {
+                        return 50
+                    } else if (d.label == "fund") {
+                        return 25
+                    } else if (d.label == "manager") {
+                        return 20
+                    }
+                })
+                .attr("fill", (d) => {
+                    if (d.label == "agency") {
+                        return "#f25f5c"
+                    } else if (d.label == "trustee") {
+                        return "#ffe066";
+                    } else if (d.label == "product") {
+                        return "#70c1b3";
+                    } else {
+                        return "orange";
+                    }
+                })
+                .attr("class", function (d) {
+                    return "node " + d.label
+                })
+                .attr("stroke-width", 8)
+                .style('stroke', "blue")
+                .style("stroke-opacity", 0)
+                .attr("cursor", "pointer")
+                .on("mouseover", function (d, i) {
+                    //显示连接线上的文字
+                    line_text.style("fill-opacity", function (graph) {
+                        if (graph.source === d || graph.target === d) {
+                            return 1;
+                        } else {
+                            return 0;
+                        }
+                    });
+                    link.style("stroke-opacity", function (graph) {
+                        if (graph.source === d || graph.target === d) {
+                            return 0.6;
+                        } else {
+                            return 0.1;
+                        }
+                    });
+                    link.style("stroke-width", function (graph) {
+                        if (graph.source === d || graph.target === d) {
+                            return 2;
+                        }
+                    });
+                    node.style("stroke-opacity", function (graph) {
+                        if (parseInt(graph.x) == parseInt(d3.event.target.cx.animVal.value)&&parseInt(graph.y) == parseInt(d3.event.target.cy.animVal.value)) {
+                            return 0.2;
+                        } else {
+                            return 0;
+                        }
+                    });
+                })
+                .on("mouseout", function (d, i) {
+                    //隐去连接线上的文字
+                    line_text.style("fill-opacity", function (edge) {
+                        if (graph.source === d || graph.target === d) {
+                            return 0;
+                        }
+                    });
+                    link.style("stroke-opacity", 0.3);
+                    link.style("stroke-width", 1);
+                    node.style("stroke-opacity", 0);
+                })
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended));
+
+            var text_dx = -40;
+            var text_dy = 0;
+
+            var nodes_text = svg.append("g")
+                .attr("class", "nodes_texts")
+                .selectAll(".nodetext")
+                .data(graph.nodes)
+                .enter()
+                .append("text")
+                .attr("class", "nodetext")
+                .attr("text-anchor", "middle")
+                .attr("dy", ".35em")
+                .style('pointer-events', 'none')
+                .attr('x', function (d) {
+                    if (d.name.length <= 4) {
+                        d3.select(this).append('tspan')
+                            .attr('x', 0)
+                            .attr('y', 2)
+                            .text(function () {
+                                return d.name;
+                            });
+                    } else {
+                        var top = d.name.substring(0, 4);
+                        var bot = d.name.substring(4, d.name.length);
+
+                        d3.select(this).text(function () {
+                            return '';
+                        });
+
+                        d3.select(this).append('tspan')
+                            .attr('x', 0)
+                            .attr('y', -7)
+                            .text(function () {
+                                return top;
+                            });
+
+                        d3.select(this).append('tspan')
+                            .attr('x', 0)
+                            .attr('y', 10)
+                            .text(function () {
+                                return bot;
+                            });
+                    }
+                })
+
+            //箭头
+            let defs = svg.append("defs").selectAll("marker")
+                .data(["managed_by", "trusteed_in", "works_for"])
+                .enter();
+            let arrowMarker = defs.append("marker")
+                .attr("id", String)
+                .attr('markerUnits', 'userSpaceOnUse')
+                .attr("markerWidth", 20)
+                .attr("markerHeight", 10)
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX", function (d) {
+                    if (d == "managed_by") {
+                        return 30;
+                    } else if (d == "trusteed_in") {
+                        return 67;
+                    } else if (d == "works_for") {
+                        return 47;
+                    }
+                })
+                .attr("refY", function (d) {
+                    if (d == "managed_by") {
+                        return -1;
+                    } else if (d == "trusteed_in") {
+                        return -12;
+                    } else if (d == "works_for") {
+                        return -6;
+                    }
+                })
+                .attr("orient", "auto");
+            let arrow_path = "M0,-5L10,0L0,5";
+            arrowMarker.append("path")
+                .attr("d", arrow_path)
+                .style("fill", function (d) {
+                    if (d == "managed_by") {
+                        return "#70c1b3";
+                    } else if (d == "trusteed_in") {
+                        return "#ffe066";
+                    } else if (d == "works_for") {
+                        return "#f25f5c";
+                    }
+                })
+            // 气泡提示
+            node.append("name")
+                .text(function (d) {
+                    return d.name;
+                })
+            // tick计时器开始
+            simulation
+                .nodes(graph.nodes)
+                .on("tick", ticked);
+
+            simulation.force("link")
+                .links(graph.links);
+
+            function ticked() {
+                link.attr("d", function (d) {
+                    var dx = d.target.x - d.source.x, //增量
+                        dy = d.target.y - d.source.y,
+                        dr = Math.sqrt(dx * dx + dy * dy);
+                    return "M" + d.source.x + "," +
+                        d.source.y + "A" + dr + "," +
+                        dr + " 0 0,1 " + d.target.x + "," +
+                        d.target.y;
+                });
+                line_text
+                    .attr("x", function (d) {
+                        return (d.source.x + d.target.x) / 2;
+                    })
+                    .attr("y", function (d) {
+                        return (d.source.y + d.target.y) / 2;
+                    })
+                node
+                    .attr("cx", (d) => {
+                        return d.x;
+                    })
+                    .attr("cy", (d) => {
+                        return d.y;
+                    });
+                nodes_text
+                    .attr("transform", transform2)
+            }
+
+            function transform2(d) {
+                return "translate(" + (d.x) + "," + d.y + ")";
+            }
+
+            function dragstarted(d) {
+                if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(d) {
+                d.fx = d3.event.x;
+                d.fy = d3.event.y;
+            }
+
+            function dragended(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+
+        });
+    </script>
+</body>
+
+</html>
